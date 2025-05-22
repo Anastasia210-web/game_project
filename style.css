@@ -45,6 +45,9 @@ body {
   font-size: 24px;
   line-height: 32px;
 }
+.header__subtitle .description-text strong {
+  font-weight: 700;
+}
 
 .header-img__pattern-1 {
   position: absolute;
@@ -89,7 +92,7 @@ body {
   line-height: 142%;
   color: rgb(255, 255, 255);
 }
-.button :hover {
+.button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
@@ -155,13 +158,15 @@ body {
   height: auto;
   display: block;
 }
+.game-card:hover {
+  transform: scale(1.05);
+}
 
 .game-card-text {
   display: flex;
   flex-direction: column-reverse;
   gap: 16px;
   padding: 32px;
-  flex: 1;
 }
 .game-card-text__title {
   font-weight: 700;
