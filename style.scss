@@ -96,7 +96,10 @@ color: rgba(255, 255, 255, 1);
   color: rgba(32, 32, 39, 1);
   }
 }
-
+.games {
+    padding-top: 94px;
+  padding-bottom: 50px;
+}
 .games-img {
   &__star-1 {
     position: absolute;
@@ -118,11 +121,25 @@ color: rgba(255, 255, 255, 1);
   position: absolute;
   padding-top: 72px;
   display: flex;
-  flex-wrap: wrap;
   gap: 32px;
 }
+.game-bloc-1 {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+.game-bloc-2 {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+.game-bloc-3 {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
 .games-intro {
-  padding-top: 94px;
+
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -142,14 +159,18 @@ color: rgba(255, 255, 255, 1);
 }
 .game-card {
 width: 378px;
+height: 551px;
 border-radius: 30px;
 background-color: white;
-display: flex;
-flex-direction: column;
+transition: transform 0.3s ease;
+box-sizing: border-box;
+  &__small{
+    height: 473px;
+  }
+  &__big {
+    height: 512px;
+  }
   &__link {
-    display: flex; 
-    flex-direction: column; 
-    height: 100%;
     text-decoration: none;
   }
   &__image {

@@ -97,6 +97,11 @@ body {
   color: rgb(32, 32, 39);
 }
 
+.games {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
 .games-img__star-1 {
   position: absolute;
   top: 945px;
@@ -117,12 +122,28 @@ body {
   position: absolute;
   padding-top: 72px;
   display: flex;
-  flex-wrap: wrap;
   gap: 32px;
 }
 
+.game-bloc-1 {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.game-bloc-2 {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.game-bloc-3 {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
 .games-intro {
-  padding-top: 94px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -142,15 +163,19 @@ body {
 
 .game-card {
   width: 378px;
+  height: 551px;
   border-radius: 30px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+.game-card__small {
+  height: 473px;
+}
+.game-card__big {
+  height: 512px;
 }
 .game-card__link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   text-decoration: none;
 }
 .game-card__image {
