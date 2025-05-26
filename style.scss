@@ -12,10 +12,8 @@ body {
   padding-right: calc(50% - 600px);
 }
 .header {
-  background-image: url(./background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1440px;
+  background-color: rgba(225, 255, 143, 1);
+
   height: 800px;
 
   &__content{
@@ -51,6 +49,12 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+  }
+  &__pattern-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
   }
   &__star-2 {
     position: absolute;
@@ -204,3 +208,4 @@ box-sizing: border-box;
     background: #F7F7F7;
     }
 }
+@import "./mobile";

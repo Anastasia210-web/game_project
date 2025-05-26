@@ -15,10 +15,7 @@ body {
 }
 
 .header {
-  background-image: url(./background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1440px;
+  background-color: rgb(225, 255, 143);
   height: 800px;
 }
 .header__content {
@@ -53,6 +50,12 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+.header-img__pattern-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
 .header-img__star-2 {
   position: absolute;
@@ -209,4 +212,73 @@ body {
   border-radius: 52.58px;
   padding: 8px 16px;
   background: #F7F7F7;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header-img__pattern-1 {
+    display: none;
+  }
+  .header-img__pattern-2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .header-img__star-2 {
+    width: 35px;
+    height: 35px;
+    top: 97px;
+    left: 38px;
+  }
+  .header-img__star-3 {
+    width: 21px;
+    height: 21px;
+    top: 64px;
+    left: 92px;
+  }
+  .header-img__star-4 {
+    width: 39px;
+    height: 41px;
+    top: 580px;
+    left: 304px;
+  }
+  .header-img__star-5 {
+    width: 18px;
+    height: 18px;
+    top: 557px;
+    left: 273px;
+  }
+  .header {
+    height: 700px;
+  }
+  .header__content {
+    align-items: center;
+  }
+  .header__text-container {
+    padding-top: 147px;
+  }
+  .header__title {
+    width: 262px;
+    height: 196px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .header__subtitle {
+    width: 296px;
+    height: 60px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .header__button {
+    font-size: 16px;
+    width: 285px;
+    height: 55px;
+  }
+  .games {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
