@@ -256,10 +256,12 @@ body {
     height: 700px;
   }
   .header__content {
+    gap: 36px;
     align-items: center;
   }
   .header__text-container {
     padding-top: 147px;
+    align-items: center;
   }
   .header__title {
     width: 262px;
@@ -271,6 +273,7 @@ body {
     width: 296px;
     height: 60px;
     font-size: 16px;
+    line-height: 100%;
     text-align: center;
   }
   .header__button {
