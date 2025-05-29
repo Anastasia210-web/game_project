@@ -100,6 +100,10 @@ body {
   color: rgb(32, 32, 39);
 }
 
+.game-game {
+  position: absolute;
+}
+
 .games {
   padding-top: 94px;
   padding-bottom: 50px;
@@ -122,7 +126,6 @@ body {
 }
 
 .games-list {
-  position: absolute;
   padding-top: 72px;
   display: flex;
   gap: 32px;
@@ -212,6 +215,106 @@ body {
   border-radius: 52.58px;
   padding: 8px 16px;
   background: #F7F7F7;
+}
+
+.mini-games {
+  padding-top: 46px;
+}
+.mini-games__title {
+  font-weight: 700;
+  font-size: 64px;
+  color: rgb(255, 255, 255);
+}
+.mini-games__list {
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mini-game {
+  width: 1200px;
+  height: 500px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: row-reverse;
+}
+.mini-game__content-game {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-top: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.mini-game__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.mini-game__image {
+  width: 600px;
+  height: 500px;
+}
+.mini-game__title {
+  font-weight: 700;
+  font-size: 48px;
+  color: rgb(32, 32, 39);
+}
+.mini-game__description {
+  width: 457px;
+  height: 64px;
+  font-weight: 400px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.mini-game__button {
+  width: 247px;
+  height: 66px;
+}
+
+.mini-game-even {
+  display: flex;
+  flex-direction: row;
+}
+
+.mini-games-img__star-6 {
+  position: absolute;
+  top: 2396px;
+  right: 95px;
+}
+.mini-games-img__star-7 {
+  position: absolute;
+  top: 2363px;
+  right: 123px;
+}
+.mini-games-img__star-8 {
+  position: absolute;
+  top: 5636px;
+  right: 65px;
+}
+.mini-games-img__star-10 {
+  position: absolute;
+  top: 5684px;
+  right: 150px;
+}
+
+.footer {
+  background-color: rgb(189, 237, 53);
+  margin-top: 144px;
+}
+
+.footer-game {
+  display: flex;
+  justify-content: center;
+  padding-top: 61px;
+  padding-bottom: 60px;
+}
+.footer-game__text {
+  font-weight: 600;
+  font-size: 24px;
 }
 
 @media (max-width: 767px) {
