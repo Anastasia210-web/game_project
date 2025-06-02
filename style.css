@@ -175,12 +175,6 @@ body {
   transition: transform 0.3s ease;
   box-sizing: border-box;
 }
-.game-card__small {
-  height: 473px;
-}
-.game-card__big {
-  height: 512px;
-}
 .game-card__link {
   text-decoration: none;
 }
@@ -191,6 +185,14 @@ body {
 }
 .game-card:hover {
   transform: scale(1.05);
+}
+
+.game-card-big {
+  height: 512px;
+}
+
+.game-card-small {
+  height: 473px;
 }
 
 .game-card-text {
