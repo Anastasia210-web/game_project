@@ -389,4 +389,63 @@ body {
   .games {
     display: none;
   }
+  .mini-games {
+    padding-top: 48px;
+  }
+  .mini-games__title {
+    font-size: 40px;
+  }
+  .mini-games__list {
+    padding-top: 48px;
+  }
+  .mini-games-img {
+    display: none;
+  }
+  .mini-game {
+    width: 343px;
+    height: 100%;
+    border-radius: 30px;
+    display: block;
+    box-sizing: content-box;
+    padding-bottom: 32px;
+  }
+  .mini-game__content-game {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 29px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+  .mini-game__image {
+    width: 343px;
+    height: 284px;
+    border-radius: 30px;
+  }
+  .mini-game__title {
+    font-size: 32px;
+  }
+  .mini-game__description {
+    font-size: 16px;
+    width: 275px;
+    height: 40px;
+    line-height: 100%;
+  }
+  .mini-game__content {
+    display: flex;
+    gap: 16px;
+  }
+  .mini-game__button {
+    width: 285px;
+    height: 55px;
+    border-radius: 60px;
+    font-size: 16px;
+    padding-bottom: 32px;
+  }
+  .footer {
+    margin-top: 9px;
+  }
+  .footer-game__text {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
