@@ -285,3 +285,39 @@ console.log(circle1.getArea());
 console.log(circle2.getArea());
 console.log(circle1.getPerimeter());
 console.log(circle2.getPerimeter());
+
+//Игра "Угадай число"
+
+
+function oneNewGame() {
+  alert('Добро пожаловать в игру "Угадай число". Тебе необходимо угадать число которое я загадала, я буду давать тебе подсказки "больше" или "меньше"');
+  let secretNumber;
+  let attempts = 0;
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+  attempts = 0;
+  while (true) {
+    const userGuess = +prompt('Твое число...');
+    attempts++;
+   if (isNaN(userGuess)) {
+    alert('Нужно ввести число!')
+    continue;
+   }
+   if (userGuess < 1 || userGuess > 100) {
+    alert('Число должно быть от 1 до 100!');
+    continue;
+   }
+   if (userGuess === secretNumber) {
+    alert(`Поздравляю! Ты угадал! Я загадала число ${secretNumber}!`);
+    break;
+   }
+   else if (userGuess < secretNumber) {
+    alert('Я загадала число больше. Попробуй еще раз!');
+    continue;
+   }
+   else {
+    alert('Я загадала число меньше. Попробуй еще раз!');
+    continue;
+   }
+  }
+}
+
