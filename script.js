@@ -211,7 +211,10 @@ function square(number) {
     console.log(number ** 2);
 }
 
+const a = (n) => n ** 2;
+
 square(5);
+console.log(a(5));
 
 //Задание 4
 function age() {
