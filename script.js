@@ -1,297 +1,122 @@
-{    //hw-2
-    //Задание 1
-    //let A = alert("10")
-    //A = alert("20")
-
-    //Задание 2
-    //alert(iPhone);
-    //let iPhone = prompt("В каком году выпустился первый iPhone?")
-
-    //Задание 3
-    //let javaScript = prompt("Имя создателя языка JavaScript?")
-    //alert(javaScript);
-
-    //Задание 4
-    //let sum = 10 + 2;
-    //alert(sum);
-
-    //let difference = 10 - 2;
-    //alert(difference);
-
-    //let product = 10 * 2;
-    //alert(product);
-
-    //let quotient = 10 / 2;
-    //alert(quotient);
-
-    //Задание 5
-    //let result = 2 ** 5;
-    //alert(result);
-
-    //Задание 6
-    //let a = 9;
-    //let b = 2;
-    //let remainder = a % b;
-    //alert(remainder);
-
-    //Задание 7
-    //let num = 1;
-    //num +=5;
-    //num -=3;
-    //num *=7;
-    //num /=3;
-    //num++;
-    //num--;
-    //alert(num);
-
-    //Задание 8 
-    //let age = Number(prompt("Сколько Вам лет?"));
-    //alert(age);
-
-    //Задание 9
-    //const user = {
-    //name: 'Anna',
-    //age: 20,
-    //isAdmin: true
-    //}
-
-    //Задание 10 
-    //let Name = prompt("Как вас зовут?");
-    //alert(`Привет, ${Name}!`);
-
-    //hw-3
-    //Задание 1 
-    //let password = '112233';
-    //let enterPassword = prompt("Введите пароль");
-    //if (enterPassword === "112233") {
-    //alert ("Пароль введен верно")}
-    //else {
-    //   alert ("Пароль введен неправильно")
-    //};
-
-    //Задание 2
-    //let c = prompt('Введите число');
-    //if (c >= 0 && c <= 10) {
-    // console.log('Верно')}
-    //else {console.log('Неверно')};
-
-    //Задание 3
-    //let d = 15;
-    //let e = 225;
-    //if (d >= 100 || e >= 100 ) 
-    //    {console.log('Верно')}
-    //else {console.log('Неверно')};
-
-    //Задание 4
-    //let a = '2';
-    //let b = '3';
-    //alert(+a + +b);
-
-    //Задание 5 
-    //var monthNumber = prompt('Введите число месяца');
-    //switch (monthNumber) {
-    //case '1':
-    // alert('Январь')
-    // break;
-    //    case '2':
-    // alert('февраль')
-    //break;
-    //             case '3':
-    // alert('Март')
-    // break;
-    //             case '4':
-    // alert('Апрель')
-    // break;
-    //             case '5':
-    // alert('Май')
-    // break;
-    //             case '6':
-    // alert('Июнь')
-    // break;
-    //             case '7':
-    // alert('Июль')
-    // break;
-    //             case '8':
-    // alert('Август')
-    // break;
-    //             case '9':
-    // alert('Сентабрь')
-    // break;
-    //             case '10':
-    // alert('Октябрь')
-    // break;
-    //             case '11':
-    // alert('Ноябрь')
-    // break;
-    //             case '12':
-    // alert('Декабрь')
-    // break;
-
-
-    //default:
-    //  alert('Такого месяца нет')
-    //  break;
-    //}
-
-    //hw-4
-    //Задание 1
-    // let i = 0;
-    // while (i < 2) {
-    //     console.log ("Привет");
-    //     i++;
-    // }
-    // //Задание 2
-    // let I = 1;
-    // while (I <= 5) {
-    // console.log(I);
-    // I++;
-    // }
-
-    // //Задание 3
-    // let a = 7;
-    // while (a <= 22) {
-    // console.log(a);
-    // a++;
-    // }
-
-    // //Задание 4
-    // const obj = {
-    //     "Коля": '200',
-    //     "Вася":'300',
-    //     "Петя": '400'
-    // }
-    // for (const key in obj) {
-    //     console.log (`${key}: ${obj[key]}`);
-    // }
-
-    // //Задание 5 
-    // let n = 1000;
-    // let num = 0;
-    // while (n >= 50) {
-    //     n /= 2;
-    //     console.log(n);
-    //     num++;
-    // }
-    // console.log(num);
-
-    // //Задание 6
-    // let dayFriday = 1;
-    // let allDay = 31;
-    // for (let i = dayFriday; i <= allDay; i += 7) {
-    //     console.log(`Сегодня пятница, ${i}-е число. Необходимо подготовить отчет.`);
-    // }
-}
-//hw-5
-
+//hw-6
 //Задание 1
-function min(a, b) {
-   if (a < b) {
-    return a;
-   } else {
-    return b;
-   }
+const age = [1, 5, 4, 10, 0, 3]
+for (let i = 0; i < age.length; i++) {
+  if (age[i] === 10) {
+    break;
+  }
+console.log(age[i]);
 }
-console.log(min(8, 4));
-console.log(min(6, 6));
 
 //Задание 2 
-function isEven(n) {
-    if (n % 2 === 0) {
-        return 'Четное число';
-    } else {
-        return 'Нечетное число';
-    }
-}
+const number = [1, 5, 4, 10, 0, 3] 
+console.log(number.indexOf(4));
 
-console.log(isEven(2));
-console.log(isEven(3));
+//Задание 3
+const num = [1, 3, 5, 10, 20]
+const numJoin = num.join(" ");
+console.log(numJoin);
 
-//Задание 3 
-function square(number) {
-    console.log(number ** 2);
-}
-
-const a = (n) => n ** 2;
-
-square(5);
-console.log(a(5));
-
-//Задание 4
-function age() {
-    let age = +prompt('Сколько тебе лет?');
-    if (age < 0) {
-        alert('Неверное значение');
-    } else if (age >= 0 && age <= 12) {
-        alert('Привет друг!');
-    } else if(age >= 13) {
-        alert('Добро пожаловать!');
-    } else {
-        alert('Вы ввели неправильное значение');
-    }
-}
-age();
-
-//Задание 5 
-function multiplyNumber(a, b) {
-  if (isNaN(Number(a)) || isNaN(Number(b))) {
-    return 'Одно или оба значения не являются числом';
-  } else {
-    return Number(a) * Number(b);
+//Задание 4 
+const arr =[];
+for (let i = 0; i < 3; i++) {
+  const arr2 = [];
+  for (let i = 0; i < 3; i++) {
+    arr.push(1);
   }
 }
-console.log(multiplyNumber(3, 4));
-console.log(multiplyNumber('5', '6')); 
-console.log(multiplyNumber('abc', 2)); 
-console.log(multiplyNumber(null, undefined));
+  console.log(arr);
+
+//Задание 5
+const one = [1, 1, 1]
+one.push(2, 2, 2);
+console.log(one);
+
 
 //Задание 6
-function getNumber() {
-    let number = prompt('Введте число');
-    if (isNaN(number)) {
-        return 'Переданный параметр не является числом';
-    } else {
-        return `${number} в кубе равняется ${number ** 3}`;
-    }
+const only = [9, 8, 7, 'a', 6, 5]
+only.sort();
+const filterOnly = only.filter(item => typeof item === 'number');
+console.log(filterOnly);
+
+//Задание 7
+const guess = [9, 8, 7, 6, 5]
+const userGuess = +prompt('Угадайте число');
+if (guess.includes(userGuess)) {
+  alert('Угадал');
+} else {
+  alert('Не угадал');
+  
 }
 
-console.log(getNumber());
+//Задание 8 
+const text = ['abcdef']
+text.reverse();
+console.log(text);
 
-// Задание 7 
-const circle1 = {
-  radius: 0,
-  
-  getArea: function() {
-    return Math.PI * Math.pow(this.radius, 2);
-  },
-  
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius;
+//Задание 9
+const numArr = [[1, 2, 3], [4, 5, 6]];
+const newArr = [];
+for (let i = 0; i < numArr.length; i++) {
+  newArr.push(...numArr[i]);
+}
+console.log(newArr);
+
+//Задание 10
+const numb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for (let i = 0; i < numb.length; i++) {
+  if (numb[i + 1]) {
+  console.log(numb[i] + numb[i + 1]);
   }
-};
+}
 
-const circle2 = {
-  radius: 0,
-  
-  getArea: function() {
-    return Math.PI * this.radius * this.radius;
-  },
-  
-  getPerimeter: function() {
-    return Math.PI * 2 * this.radius;
-  }
-};
+//Задание 11
+function square(arr) {
+  return arr.map(item => item ** 2);
+}
+console.log(square([1, 2, 3]));
 
-circle1.radius = 5;
-circle2.radius = 10;
+//Задание 12
+function name(arr) {
+  return arr.map(item => item.length);
+}
+console.log(name(['my', 'name', 'Anastasia']))
 
-console.log(circle1.getArea()); 
-console.log(circle2.getArea());
-console.log(circle1.getPerimeter());
-console.log(circle2.getPerimeter());
+//Задание 13
+function notNum(array) {
+  return array.filter(item => item < 0);
+}
+console.log(notNum([1, 2, -3, 4, -5, 6, 7, -8, -9, 10]));
+
+//Задание 14
+function getRandomNumber() {
+    return Math.floor(Math.random() * 10);
+}
+
+const numbers = Array.from({length: 10}, getRandomNumber);
+
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+console.log('Исходный массив:', numbers);
+console.log('Четные числа:', evenNumbers);
+
+
+//Задание 15
+function generateRandomNumber() {
+    return Math.floor(Math.random() * 10);
+}
+const numbe = [];
+for (let i = 0; i < 10; i++) {
+    numbe.push(generateRandomNumber());
+}
+console.log("Сгенерированные числа:", numbe);
+const average = numbe.reduce((sum, number) => sum + number, 0) / numbers.length;
+console.log("Среднее значение:", average);
+
+
+
 
 //Игра "Угадай число"
-
-
 function oneNewGame() {
   alert('Добро пожаловать в игру "Угадай число". Тебе необходимо угадать число которое я загадала, я буду давать тебе подсказки "больше" или "меньше"');
   let secretNumber;
