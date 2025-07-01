@@ -22,8 +22,9 @@ const arr =[];
 for (let i = 0; i < 3; i++) {
   const arr2 = [];
   for (let i = 0; i < 3; i++) {
-    arr.push(1);
+    arr2.push(1);
   }
+  arr.push(arr2);
 }
   console.log(arr);
 
@@ -50,8 +51,11 @@ if (guess.includes(userGuess)) {
 }
 
 //Задание 8 
-const text = ['abcdef']
+let text = 'abcdef'
+text = text.split('')
+console.log(text);
 text.reverse();
+text = text.join('');
 console.log(text);
 
 //Задание 9
@@ -147,5 +151,56 @@ function oneNewGame() {
     continue;
    }
   }
+}
+
+//Игра "Арифметические задачки"
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function generateProblem() {
+  const operations = ['+', '-', '*', '/'];
+  const operation = operations[getRandomInt(0, 3)];
+  
+  let num1, num2;
+  if (operation === '/') {
+    num2 = getRandomInt(1, 10);
+    const result = getRandomInt(1, 10);
+    num1 = num2 * result;
+  } else {
+    num1 = getRandomInt(1, 20);
+    num2 = getRandomInt(1, 20);
+  }
+  
+  const expression = `${num1} ${operation} ${num2}`;
+  const answer = eval(expression);
+  
+  return { expression, answer };
+}
+function startMathGame() {
+  alert("Добро пожаловать в игру 'Простая арифметика'!\nРешите предложенную задачу.");
+  
+  let playAgain = true;
+  
+  while (playAgain) {
+    const problem = generateProblem();
+    const userAnswer = prompt(`Сколько будет: ${problem.expression}?`);
+    
+    if (userAnswer === null) {
+      alert("Игра завершена.");
+      return;
+    }
+    
+    const numericAnswer = parseFloat(userAnswer);
+    
+    if (isNaN(numericAnswer)) {
+      alert("Пожалуйста, вводите только числа!");
+    } else if (Math.abs(numericAnswer - problem.answer) < 0.001) {
+      alert("Правильно! Молодец!");
+    } else {
+      alert(`Неправильно. Правильный ответ: ${problem.answer}`);
+    }
+  } 
+  alert("Спасибо за игру! До свидания!");
 }
 
