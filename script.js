@@ -1,124 +1,92 @@
-//hw-6
+//hw-7
 //Задание 1
-const age = [1, 5, 4, 10, 0, 3]
-for (let i = 0; i < age.length; i++) {
-  if (age[i] === 10) {
-    break;
-  }
-console.log(age[i]);
+let js = 'js';
+const result = js.toUpperCase();
+console.log(result);
+
+//Задание 2
+function filterStringsByPrefix(arr, prefix) {
+  const lowerPrefix = prefix.toLowerCase();
+  return arr.filter(item => 
+    item.toLowerCase().startsWith(lowerPrefix)
+  );
 }
 
-//Задание 2 
-const number = [1, 5, 4, 10, 0, 3] 
-console.log(number.indexOf(4));
+const fruits = ['Apple', 'Banana', 'apricot', 'Orange', 'Grape', 'avocado'];
+const filteredFruits = filterStringsByPrefix(fruits, 'ap');
+console.log(filteredFruits);
 
 //Задание 3
-const num = [1, 3, 5, 10, 20]
-const numJoin = num.join(" ");
-console.log(numJoin);
+let arr = 32.58884;
 
-//Задание 4 
-const arr =[];
-for (let i = 0; i < 3; i++) {
-  const arr2 = [];
-  for (let i = 0; i < 3; i++) {
-    arr2.push(1);
-  }
-  arr.push(arr2);
-}
-  console.log(arr);
+console.log(Math.ceil(arr));
+console.log(Math.round(arr));
+console.log(Math.floor(arr));
+
+//Задание 4
+const numbers = [52, 53, 49, 77, 21, 32];
+const minValue = Math.min(...numbers);
+const maxValue = Math.max(...numbers);
+
+console.log(minValue);
+console.log(maxValue);
 
 //Задание 5
-const one = [1, 1, 1]
-one.push(2, 2, 2);
-console.log(one);
-
+function resultR(){
+let numberRandom;
+resultRandom = Math.floor(Math.random() * 10) + 1;
+console.log(resultRandom);
+}
+resultR()
 
 //Задание 6
-const only = [9, 8, 7, 'a', 6, 5]
-only.sort();
-const filterOnly = only.filter(item => typeof item === 'number');
-console.log(filterOnly);
+function generateRandomArray(n) {
+  const length = Math.floor(n / 2);
+  return Array.from({ length }, () => Math.floor(Math.random() * (n + 1)));
+}
+
+console.log(generateRandomArray(16));
 
 //Задание 7
-const guess = [9, 8, 7, 6, 5]
-const userGuess = +prompt('Угадайте число');
-if (guess.includes(userGuess)) {
-  alert('Угадал');
-} else {
-  alert('Не угадал');
-  
+function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+console.log(getRandomInRange(5, 10));
 
-//Задание 8 
-let text = 'abcdef'
-text = text.split('')
-console.log(text);
-text.reverse();
-text = text.join('');
-console.log(text);
+//Задание 8
+let tuday = new Date;
+console.log(tuday);
 
 //Задание 9
-const numArr = [[1, 2, 3], [4, 5, 6]];
-const newArr = [];
-for (let i = 0; i < numArr.length; i++) {
-  newArr.push(...numArr[i]);
-}
-console.log(newArr);
+let currentDate = new Date;
+currentDate.setDate(currentDate.getDate() + 73);
+console.log(currentDate);
 
 //Задание 10
-const numb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-for (let i = 0; i < numb.length; i++) {
-  if (numb[i + 1]) {
-  console.log(numb[i] + numb[i + 1]);
-  }
+function myDateRus(date) {
+    const months = [
+    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+  ];
+  
+  const days = [
+    'воскресенье', 'понедельник', 'вторник', 'среда',
+    'четверг', 'пятница', 'суббота'
+  ];
+
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  const weekday = days[date.getDay()];
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+
+  return `Дата: ${day} ${month} ${year} — это ${weekday}.\nВремя: ${hours}:${minutes}:${seconds}`;
 }
 
-//Задание 11
-function square(arr) {
-  return arr.map(item => item ** 2);
-}
-console.log(square([1, 2, 3]));
-
-//Задание 12
-function name(arr) {
-  return arr.map(item => item.length);
-}
-console.log(name(['my', 'name', 'Anastasia']))
-
-//Задание 13
-function notNum(array) {
-  return array.filter(item => item < 0);
-}
-console.log(notNum([1, 2, -3, 4, -5, 6, 7, -8, -9, 10]));
-
-//Задание 14
-function getRandomNumber() {
-    return Math.floor(Math.random() * 10);
-}
-
-const numbers = Array.from({length: 10}, getRandomNumber);
-
-const evenNumbers = numbers.filter(num => num % 2 === 0);
-
-console.log('Исходный массив:', numbers);
-console.log('Четные числа:', evenNumbers);
-
-
-//Задание 15
-function generateRandomNumber() {
-    return Math.floor(Math.random() * 10);
-}
-const numbe = [];
-for (let i = 0; i < 10; i++) {
-    numbe.push(generateRandomNumber());
-}
-console.log("Сгенерированные числа:", numbe);
-const average = numbe.reduce((sum, number) => sum + number, 0) / numbers.length;
-console.log("Среднее значение:", average);
-
-
-
+const myDate = new Date();
+console.log(myDateRus(myDate));
 
 //Игра "Угадай число"
 function oneNewGame() {
@@ -202,5 +170,55 @@ function startMathGame() {
     }
   } 
   alert("Спасибо за игру! До свидания!");
+}
+
+//Игра "Переверни текст"
+function gameText() {
+const text = prompt("Давай поиграем! Напиши любой текст и посмотри результат");
+if (text) {
+  const result = text.split('').reverse().join(''); 
+  alert(`Твой текст наоборот- ${result}`);
+} else {
+  alert("Ты ничего не написал, хочешь выйти из игры?")
+}
+}
+
+//Игра "Викторина"
+
+const quiz = [
+            {
+                question: "Какой цвет небо?",
+                options: ["1. Красный", "2. Синий", "3. Зеленый"],
+                correctAnswer: 2 
+            },
+            {
+                question: "Сколько дней в неделе?",
+                options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                correctAnswer: 2
+            },
+            {
+                question: "Сколько у человека пальцев на одной руке?",
+                options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                correctAnswer: 2
+            }
+        ];
+function runQuiz() {
+  let score = 0;
+  for (let i = 0; i < quiz.length; i++) {
+  const currentQuestion = quiz[i];
+
+  let questionText = `${currentQuestion.question}\n`;
+  questionText += currentQuestion.options.join('\n');
+  
+  const userAnswer = parseInt(prompt(questionText));
+
+  if (userAnswer === currentQuestion.correctAnswer) {
+    score++;
+      alert("Правильно!");
+    } else {
+        alert(`Неправильно! Правильный ответ: ${currentQuestion.correctAnswer}`);
+    }
+  }
+  alert(`Викторина завершена!\nПравильных ответов: ${score} из ${quiz.length}`);
 }
 
