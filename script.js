@@ -1,92 +1,95 @@
-//hw-7
+//hw-8
 //Задание 1
-let js = 'js';
-const result = js.toUpperCase();
-console.log(result);
+const people = [
+   { name: 'Глеб', age: 29 },
+   { name: 'Анна', age: 17 },
+   { name: 'Олег', age: 7 },
+   { name: 'Оксана', age: 47 }
+];
+
+// Допишите колбэк для sort, изучите, как работает колбэк, в документации
+console.log(people.sort((a, b) => a.age - b.age));
+// код выше должен вывеcти =>
+// [
+//  { name: 'Олег', age: 7 },
+//  { name: 'Анна', age: 17 },
+//  { name: 'Глеб', age: 29 },
+//  { name: 'Оксана', age: 47 }
+// ]
 
 //Задание 2
-function filterStringsByPrefix(arr, prefix) {
-  const lowerPrefix = prefix.toLowerCase();
-  return arr.filter(item => 
-    item.toLowerCase().startsWith(lowerPrefix)
-  );
+function isPositive(num) {
+  return num > 0;
 }
 
-const fruits = ['Apple', 'Banana', 'apricot', 'Orange', 'Grape', 'avocado'];
-const filteredFruits = filterStringsByPrefix(fruits, 'ap');
-console.log(filteredFruits);
+function isMale(person) {
+  return person.gender === 'male';
+}
+
+function filter(arr, ruleFunction) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (ruleFunction(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+console.log(filter([3, -4, 1, 9], isPositive));
+
+const peopleOne = [
+  { name: 'Глеб', gender: 'male' },
+  { name: 'Анна', gender: 'female' },
+  { name: 'Олег', gender: 'male' },
+  { name: 'Оксана', gender: 'female' }
+];
+
+console.log(filter(peopleOne, isMale)); 
 
 //Задание 3
-let arr = 32.58884;
+function printDateEvery3Seconds() {
+  let secondsPassed = 0;
+  const interval = setInterval(() => {
+    console.log(new Date());
+    secondsPassed += 3;
+    
+    if (secondsPassed >= 30) {
+      clearInterval(interval);
+      console.log("30 секунд прошло");
+    }
+  }, 3000);
+}
 
-console.log(Math.ceil(arr));
-console.log(Math.round(arr));
-console.log(Math.floor(arr));
+printDateEvery3Seconds();
 
 //Задание 4
-const numbers = [52, 53, 49, 77, 21, 32];
-const minValue = Math.min(...numbers);
-const maxValue = Math.max(...numbers);
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
+}
 
-console.log(minValue);
-console.log(maxValue);
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+});
 
 //Задание 5
-function resultR(){
-let numberRandom;
-resultRandom = Math.floor(Math.random() * 10) + 1;
-console.log(resultRandom);
-}
-resultR()
-
-//Задание 6
-function generateRandomArray(n) {
-  const length = Math.floor(n / 2);
-  return Array.from({ length }, () => Math.floor(Math.random() * (n + 1)));
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
 }
 
-console.log(generateRandomArray(16));
-
-//Задание 7
-function getRandomInRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-console.log(getRandomInRange(5, 10));
-
-//Задание 8
-let tuday = new Date;
-console.log(tuday);
-
-//Задание 9
-let currentDate = new Date;
-currentDate.setDate(currentDate.getDate() + 73);
-console.log(currentDate);
-
-//Задание 10
-function myDateRus(date) {
-    const months = [
-    'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
-    'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
-  ];
-  
-  const days = [
-    'воскресенье', 'понедельник', 'вторник', 'среда',
-    'четверг', 'пятница', 'суббота'
-  ];
-
-  const day = date.getDate();
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  const weekday = days[date.getDay()];
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
-
-  return `Дата: ${day} ${month} ${year} — это ${weekday}.\nВремя: ${hours}:${minutes}:${seconds}`;
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log('Привет, ${name}!');
 }
 
-const myDate = new Date();
-console.log(myDateRus(myDate));
+// Код выше менять нельзя
+
+delayForSecond(() => sayHi('Глеб'));
 
 //Игра "Угадай число"
 function oneNewGame() {
@@ -221,4 +224,46 @@ function runQuiz() {
   }
   alert(`Викторина завершена!\nПравильных ответов: ${score} из ${quiz.length}`);
 }
+
+// Игра "Камень, ножницы, бумага"
+function playGame() {
+  const options = ["камень", "ножницы", "бумага"];
+  
+  const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
+  
+  if (!options.includes(userChoice)) {
+    alert("Некорректный ввод. Пожалуйста, выберите камень, ножницы или бумагу.");
+    return playGame();
+  }
+  
+  const computerChoice = options[Math.floor(Math.random() * options.length)];
+  
+  let result;
+  
+  if (userChoice === computerChoice) {
+    result = "Ничья!";
+  } else if (
+    (userChoice === "камень" && computerChoice === "ножницы") ||
+    (userChoice === "ножницы" && computerChoice === "бумага") ||
+    (userChoice === "бумага" && computerChoice === "камень")
+  ) {
+    result = "Вы победили!";
+  } else {
+    result = "Компьютер победил!";
+  }
+  
+  alert(`
+    Ваш выбор: ${userChoice}
+    Выбор компьютера: ${computerChoice}
+    Результат: ${result}
+  `);
+  
+  if (confirm("Хотите сыграть еще раз?")) {
+    playGame();
+  } else {
+    alert("Спасибо за игру!");
+  }
+}
+
+
 
