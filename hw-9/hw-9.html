@@ -6,10 +6,64 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="text">Привет! Я новичок в JS </h1>
-    <button class="btn">Скрыть текст!</button>
+    <h1 id="text">Привет! Я новичок в JS </h1>
+    <button id="btn">Скрыть текст</button>
+        <style>
+            .hidden {
+                display: none;
+            }  
+            </style>
+            <script>//Задание 1
+                const header = document.querySelector('#text');
+                const buttonEl = document.querySelector('#btn');
+                buttonEl.addEventListener('click', function() {
+                    header.classList.toggle('hidden');
+                })
+            </script>
+    <p class="color">Этот текст поменяет цвет, если ты нажмешь на кнопку</p>
+    <button class="btnColor">Жмать сюда</button>
+            <script>//Задание 2
+                const textColor = document.querySelector('.color');
+                const btnColorEl = document.querySelector('.btnColor');
+                btnColorEl.addEventListener('click', function() {
+                    textColor.style.color = 'blue';
+                })
+            </script>
+    <h2 class="txt">Сейчас случится волшебство</h2>
+    <button class="btnTxt">Изменить текст</button>
+            <script> //Задание 3
+                const txtEl = document.querySelector('.txt');
+                const btnTxtEl = document.querySelector('.btnTxt');
+                btnTxtEl.addEventListener('click', () => {
+                    txtEl.textContent = 'Привет мир!'
+                })
+            </script>
+    <h2 class="title">Этот заголовок нужен для 4 задания</h2>
+    <p class="ttl">Мне очень нравится учиться, кончено временами тяжело, но я и не расчитывала, что будет легко</p>
+    <p class="textTitle">Мне нравится, что куратор и наставники</p>
+    <ul>
+        <li class="description">Внимательные</li>
+        <li class="description">Доброжелательные</li>
+        <li class="description">Отзывчивые</li>
+    </ul>
+        <script> //Задание 4-5
+            const descriptionEl = document.querySelectorAll('.description');
+            descriptionEl.forEach( description => {
+                description.textContent = 'Просто классные'
+            })
+        </script>
+        <script>//Задание 6
+            const newPar = document.createElement('p');
+            newPar.textContent = 'Надеюсь в этой домашке будет не так много ошибок. Я очень старалась';
+            document.body.appendChild(newPar);
+        </script>
+        <p class="descriptionNew">Удалить</p>
+        <p class="descriptionNew">Не удалять</p>
+        <p class="descriptionNew">Не трогать</p>
         <script>
-            const element = document.querySelector('.btn');
+            const descriptionDelit = document.querySelectorAll('.descriptionNew');
+            const delitParagraph = document.querySelector('.descriptionNew');
+            delitParagraph.remove()
         </script>
 </body>
 </html>
