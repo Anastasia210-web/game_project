@@ -69,7 +69,19 @@
  
 
     }
-
+.animation {
+    &__track {
+        gap: 27px;
+    }
+    &__text {
+    font-weight: 700;
+    font-size: 16px;
+    }
+    &__img {
+        width: 19px;
+        height: 19px;
+    }
+}
    .games {
     display: none;
    }
@@ -125,7 +137,7 @@
             height: 55px;
             border-radius: 60px;
             font-size: 16px;
-            padding-bottom: 32px;
+            padding-bottom: 0px;
         }
   }
   .footer {
