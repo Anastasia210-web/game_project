@@ -425,6 +425,17 @@ body {
     width: 285px;
     height: 55px;
   }
+  .animation__track {
+    gap: 27px;
+  }
+  .animation__text {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .animation__img {
+    width: 19px;
+    height: 19px;
+  }
   .games {
     display: none;
   }
@@ -479,7 +490,7 @@ body {
     height: 55px;
     border-radius: 60px;
     font-size: 16px;
-    padding-bottom: 32px;
+    padding-bottom: 0px;
   }
   .footer {
     margin-top: 9px;
