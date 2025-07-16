@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -13,12 +16,12 @@ body {
 }
 .header {
   background-color: rgba(225, 255, 143, 1);
-  height: 800px;
 
   &__content{
     display: flex;
     flex-direction: column;
     gap: 48px;
+    padding-bottom: 156px;
   }
   &__text-container{
     padding-top: 196px;
@@ -78,25 +81,51 @@ body {
 
 }
 .button {
-  width: 247px;
+width: 247px;
 height: 66px;
 border-radius: 60px;
 border-width: 1px;
 border-color: rgba(32, 32, 39, 1);
 background-color: rgba(32, 32, 39, 1);
-padding-top: 16px;
-padding-right: 28px;
-padding-bottom: 16px;
-padding-left: 28px;
+display: flex;
+align-items: center;
+justify-content: center;
 font-family: sans-serif;
 font-weight: 600;
 font-size: 24px;
 line-height: 142%;
 color: rgba(255, 255, 255, 1);
+text-decoration: none;
   &:hover {
   background-color: rgba(255, 255, 255, 1);
   color: rgba(32, 32, 39, 1);
+   font-family: sans-serif;
   }
+}
+.animation {
+  width: 100%;
+  position: relative;
+  background-color: #BCEC30;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__track{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    gap: 51px;
+    animation: scroll 20s linear infinite;
+  }
+  &__text {
+    width: 100%;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+  }
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .game-game {
   position: absolute;
@@ -123,6 +152,7 @@ color: rgba(255, 255, 255, 1);
   }
 }
 .games-list {
+  position: relative;
   padding-top: 72px;
   display: flex;
   gap: 32px;
@@ -244,6 +274,8 @@ flex-direction: row-reverse;
         gap: 24px;
     }
     &__image {
+      object-fit: cover;
+      border-radius: 30px;
       width: 600px;
       height: 500px;
     }
@@ -253,13 +285,13 @@ flex-direction: row-reverse;
       color: rgba(32, 32, 39, 1);
     }
     &__description {
-      width: 457px;
       height: 64px;
       font-weight: 400px;
       font-size: 24px;
       line-height: 32px;
     }
     &__button {
+      font-family: sans-serif;
       width: 247px;
       height: 66px;
     }
