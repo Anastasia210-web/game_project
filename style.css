@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -16,12 +20,12 @@ body {
 
 .header {
   background-color: rgb(225, 255, 143);
-  height: 800px;
 }
 .header__content {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding-bottom: 156px;
 }
 .header__text-container {
   padding-top: 196px;
@@ -85,21 +89,52 @@ body {
   border-width: 1px;
   border-color: rgb(32, 32, 39);
   background-color: rgb(32, 32, 39);
-  padding-top: 16px;
-  padding-right: 28px;
-  padding-bottom: 16px;
-  padding-left: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 142%;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 .button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
+  font-family: sans-serif;
 }
 
+.animation {
+  width: 100%;
+  position: relative;
+  background-color: #BCEC30;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.animation__track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  gap: 51px;
+  animation: scroll 20s linear infinite;
+}
+.animation__text {
+  width: 100%;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .game-game {
   position: absolute;
 }
@@ -126,6 +161,7 @@ body {
 }
 
 .games-list {
+  position: relative;
   padding-top: 72px;
   display: flex;
   gap: 32px;
@@ -257,6 +293,9 @@ body {
   gap: 24px;
 }
 .mini-game__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
   width: 600px;
   height: 500px;
 }
@@ -266,13 +305,13 @@ body {
   color: rgb(32, 32, 39);
 }
 .mini-game__description {
-  width: 457px;
   height: 64px;
   font-weight: 400px;
   font-size: 24px;
   line-height: 32px;
 }
 .mini-game__button {
+  font-family: sans-serif;
   width: 247px;
   height: 66px;
 }
@@ -386,6 +425,17 @@ body {
     width: 285px;
     height: 55px;
   }
+  .animation__track {
+    gap: 27px;
+  }
+  .animation__text {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .animation__img {
+    width: 19px;
+    height: 19px;
+  }
   .games {
     display: none;
   }
@@ -440,7 +490,7 @@ body {
     height: 55px;
     border-radius: 60px;
     font-size: 16px;
-    padding-bottom: 32px;
+    padding-bottom: 0px;
   }
   .footer {
     margin-top: 9px;
